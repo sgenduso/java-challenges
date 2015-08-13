@@ -6,9 +6,21 @@ package challenges;
 
 //without additional data structures:
 
+public class IsUnique {
+
+  public Boolean allUnique(String stringInput) {
+    for (int i = 0; i < stringInput.length(); i++) {
+      for (int j = i + 1; j < stringInput.length(); j++) {
+        if (stringInput.charAt(i) == stringInput.charAt(j)) {
+          return false;
+        }
+      }
+    }
+    return true;
+  }
+}
 
 //using additional data structures:
-
 
 // import java.util.ArrayList;
 //
