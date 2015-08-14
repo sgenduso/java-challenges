@@ -2,17 +2,17 @@ package challenges;
 
 public class Node {
   Node next = null;
-  int data;
+  Object data;
 
-  public Node(int d) {
+  public Node(Object d) {
     data = d;
   }
 
-  public int getNodeData() {
+  public Object getNodeData() {
     return data;
   }
 
-  public void setNodeData(int d) {
+  public void setNodeData(Object d) {
     data = d;
   }
 

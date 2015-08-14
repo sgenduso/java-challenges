@@ -12,12 +12,13 @@ public class LinkedListTest {
     @Before
     public void setUp() {
         linkedList = new LinkedList();
-        int[] nodesToAdd = {1,2,4,2,3,4};
+        Object[] nodesToAdd = {1,2,4,2,3,4};
         linkedList.addMultipleNodes(nodesToAdd);
+
     }
 
     @Test
     public void addMultipleNodes_ShouldAddNodesToList() {
-        assertEquals(2, linkedList);
+        assertEquals(6, linkedList.listLength());
     }
 }

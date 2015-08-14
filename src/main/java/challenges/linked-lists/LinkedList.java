@@ -15,11 +15,11 @@ public class LinkedList {
     return (head.data == null);
   }
 
-  public int nodeLength(){
+  public int listLength(){
     return nodeCount;
   }
 
-  public void addNode(int d) {
+  public void addNode(Object d) {
     Node newNode = new Node(d);
     Node currentNode = head;
     while (currentNode.next != null) {
@@ -29,9 +29,9 @@ public class LinkedList {
     nodeCount++;
   }
 
-  public void addMultipleNodes(int[] integers){
-    for (int integer : integers) {
-      Node newNode = new Node(integer);
+  public void addMultipleNodes(Object[] data){
+    for (Object item : data) {
+      Node newNode = new Node(item);
       Node currentNode = head;
       while (currentNode.next != null){
         currentNode = currentNode.next;
