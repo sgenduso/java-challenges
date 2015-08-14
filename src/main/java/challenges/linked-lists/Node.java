@@ -8,12 +8,20 @@ public class Node {
     data = d;
   }
 
-  void addNode(int d) {
-    Node newNode = new Node(d);
-    Node currentNode = this;
-    while (currentNode.next != null) {
-      currentNode = currentNode.next;
-    }
-    currentNode.next = newNode;
+  public int getNodeData() {
+    return data;
   }
+
+  public void setNodeData(int d) {
+    data = d;
+  }
+
+  public Node getNextNode(){
+    return next;
+  }
+
+  public void setNextNode(Node nextNode){
+    next = nextNode;
+  }
+
 }
