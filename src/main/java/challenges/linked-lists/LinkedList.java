@@ -19,6 +19,7 @@ public class LinkedList {
     return nodeCount;
   }
 
+//add one node at a time
   public void addNode(Object d) {
     Node newNode = new Node(d);
     Node currentNode = head;
@@ -29,6 +30,7 @@ public class LinkedList {
     nodeCount++;
   }
 
+//add array of multiple nodes
   public void addMultipleNodes(Object[] data){
     for (Object item : data) {
       Node newNode = new Node(item);
@@ -39,6 +41,29 @@ public class LinkedList {
       currentNode.next = newNode;
       nodeCount++;
     }
+  }
+
+//remove nodes with duplicate data values
+  public void removeDupes(){
+    Node currentNode = head.next;
+      int iteration = 0;
+    while(currentNode.next != null){
+      iteration = iteration + 1;
+    Object currentData = currentNode.data;
+      System.out.println("iteration: " + iteration + ", looking for: " + currentData);
+    Node tempCurrent = currentNode;
+      while(tempCurrent.next != null){
+        System.out.println(tempCurrent.next.data);
+        if (tempCurrent.next.data == currentData) {
+          System.out.println("node " + tempCurrent.next.data + " removed");
+          tempCurrent.next = tempCurrent.next.next;
+          nodeCount--;
+        } else {
+          tempCurrent = tempCurrent.next;
+        }
+    }
+      currentNode = currentNode.next;
+  }
   }
 
 }
